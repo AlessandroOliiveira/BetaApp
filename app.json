@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "BetaApp",
+    "slug": "BetaApp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "package": "android.name"
+    }
+  }
+}
