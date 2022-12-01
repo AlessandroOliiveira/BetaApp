@@ -70,7 +70,7 @@ const MRU = () => {
     <StyledContainer>
       <InnerContainer>
         <Box>
-        
+
         </Box>
         <TextGroup>
           <Title>Movimento Retilineo Uniforme</Title>
@@ -111,7 +111,10 @@ const MRU = () => {
           </InputBox>
         </InputGroup>
         <ModalC>
-          testeeeeee
+          s: posição final (m)
+          s0: posição inicial (m)
+          v: velocidade (m/s)
+          ∆t: intervalo de tempo (s)
         </ModalC>
         <Box>
           <ObsText>Obs: coloque 0 no valor que quer descobrir</ObsText>

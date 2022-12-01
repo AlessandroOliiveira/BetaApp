@@ -22,91 +22,113 @@ import {
 } from "../../../components/styles/InputStyles";
 
 const MRUV = () => {
-  const [tv, setTv] = useState(Number);
-  const [t1v, setT1v] = useState(Number);
-  const [t2v, setT2v] = useState(Number);
+  const [vv, setVv] = useState();
+  const [v0v, setV0v] = useState();
+  const [av, setAv] = useState();
+  const [tv, setTv] = useState();
+  const [solution, setSolution] = useState([]);
 
-  //MOVIMENTO UNIFORME VARIADO  1.25 5 4
-  function aceleracaoMedia(t, t1, t2) {
-    //am = v/t;
-    //num = am*t
-    //num = v/am;
 
-    let num, value;
+  //MOVIMENTO UNIFORME VARIADO  
+  function funcaoMRUV(v, v0, a, t) {
 
-    if (t == 0) {
-      value = t1 - t2;
+    let num;
 
-      num = "am = " + t1 + " / " + t2 + "  ";
-      num += "am = " + t1 + " / " + t2 + "  ";
-      num += "am = " + t1 / t2;
+    if (v == 0) {
+
+      num = "V = " + v0 + " + " + a + " * " + t;
+      num += "V = " + v0 + " + " + (a * t);
+      num += "V = " + (v0 + a * t);
       num.toString();
-    } else if (t1 == 0) {
-      value = t * t2;
 
-      num = "v = " + t + " * " + t2 + "  ";
-      num += "v = " + t + " * " + t2 + "  ";
-      num += "v = " + t * t2;
+    } else if (v0 == 0) {
+
+      num = "V0 = " + v + " - ( " + a + " * " + t + " ) ";
+      num += "V0 = " + v + " + " + (-(a * t));
+      num += "V0 = " + (v + -(a * t));
       num.toString();
-    } else if (t2 == 0) {
-      value = t1 / t;
 
-      num = "t = " + t1 + " / " + t + "  ";
-      num += "t = " + t1 + " / " + t + "  ";
-      num += "t = " + t1 / t;
+    } else if (a == 0) {
+      num = "a = (" + v + " - " + v0 + ") / " + t + "  ";
+      num += "a = " + (s - s0) + " / " + t + "  ";
+      num += "a = " + (s - s0) / t;
       num.toString();
     }
 
-    if (value < 0) {
-      return "Não existe aceleração negativa";
-    } else {
-      let ride = num.split("  ");
 
-      return ride;
-    }
+    let ride = num.split("  ");
+
+    return setSolution(ride);
+
   }
+
   return (
     <StyledContainer>
       <InnerContainer>
         <Box>
-         
+
         </Box>
         <TextGroup>
           <Title>Movimento Retilineo Uniforme Variado</Title>
-          <SubTitle>V = Vo + a * t</SubTitle>
+          <SubTitle>V = V0 + a + t</SubTitle>
         </TextGroup>
         <InputGroup>
           <InputBox>
             <InputTitle>V =</InputTitle>
-            <InputText type="Number"
-              value={sv}
-              onChangeText={(numer) => setSv(Number(numer))} />
+            <InputText
+              type="Number"
+              value={vv}
+              onChangeText={(numer) => setVv(numer)}
+            />
           </InputBox>
           <InputBox>
-            <InputTitle>Vo =</InputTitle>
-            <InputText />
+            <InputTitle>V0 =</InputTitle>
+            <InputText
+              value={v0v}
+              onChangeText={(numer) => setV0v(numer)}
+            />
           </InputBox>
         </InputGroup>
         <InputGroup>
           <InputBox>
-            <InputTitle active>a =</InputTitle>
-            <InputText />
+            <InputTitle>a =</InputTitle>
+            <InputText
+              value={av}
+              onChangeText={(numer) => setAv(numer)}
+            />
           </InputBox>
           <InputBox>
-            <InputTitle active>t =</InputTitle>
-            <InputText />
+            <InputTitle>t =</InputTitle>
+            <InputText
+              active
+              value={tv}
+              onChangeText={(numer) => setTv(numer)}
+            />
           </InputBox>
         </InputGroup>
+        <ModalC>
+          v: velocidade (m/s)
+          vo: velocidade inicial (m/s)
+          a: aceleração (m/s2)
+          t: tempo (s)
+        </ModalC>
         <Box>
-          <ObsText>Obs: coloque x no valor que quer descobrir</ObsText>
+          <ObsText>Obs: coloque 0 no valor que quer descobrir</ObsText>
         </Box>
-        <Screen></Screen>
-        <Button onPress={console.log("apertou")}>
+
+        <Screen>
+          {solution.map((el, i) => (
+            <ObsText key={i}>{el}</ObsText>
+          ))}
+
+        </Screen>
+        <Button onPress={() => funcaoMRUV(vv, v0v, av, tv)}>
           <ButtonText>Calcular</ButtonText>
         </Button>
+
       </InnerContainer>
     </StyledContainer>
   );
-};
+}
 
 export default MRUV;
