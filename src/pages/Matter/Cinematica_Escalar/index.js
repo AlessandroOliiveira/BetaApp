@@ -30,6 +30,10 @@ const Calculator = ({ navigation }) => {
           <Button onPress={() => navigation.navigate("MRUV")}>
             <ButtonText>Movimento Retilineo Uniforme Variado</ButtonText>
           </Button>
+          <Button onPress={() => navigation.navigate("Content")}>
+            <ButtonText>Em Breve</ButtonText>
+          </Button>
+
         </ButtonGroup>
       </InnerContainer>
     </StyledContainer>

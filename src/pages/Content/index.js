@@ -5,6 +5,7 @@ import { StatusBar } from "expo-status-bar";
 import {
   StyledContainer,
   InnerContainer,
+  Box,
 } from "../../components/styles/BaseConteinerStyles";
 
 import { Title } from "../../components/styles/TextStyles";

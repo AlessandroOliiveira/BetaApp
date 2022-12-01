@@ -27,7 +27,7 @@ const Calculator = ({ navigation }) => {
           <Button onPress={() => navigation.navigate("MatterC")}>
             <ButtonText>Cinematica Escalar</ButtonText>
           </Button>
-          <Button onPress={() => navigation.navigate("")}>
+          <Button onPress={() => navigation.navigate("Dinamica")}>
             <ButtonText>Dinâmica</ButtonText>
           </Button>
           <Button onPress={() => navigation.navigate("Content")}>

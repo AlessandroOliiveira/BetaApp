@@ -19,17 +19,8 @@ const Calculator = ({ navigation }) => {
         </Box>
         <Title>Escolha Um Assunto</Title>
         <ButtonGroup>
-          <Button onPress={() => navigation.navigate("MRU")}>
-            <ButtonText>Movimento Retilineo Uniforme</ButtonText>
-          </Button>
-          <Button onPress={() => navigation.navigate("MRUV")}>
-            <ButtonText>Movimento Retilineo Uniforme Variado</ButtonText>
-          </Button>
-          <Button onPress={() => navigation.navigate("Torricelli")}>
-            <ButtonText>Equação de Torricelli</ButtonText>
-          </Button>
-          <Button onPress={() => navigation.navigate("VEM")}>
-            <ButtonText>Velocidade Escalar Media</ButtonText>
+          <Button onPress={() => navigation.navigate("Content")}>
+            <ButtonText>Carregando...</ButtonText>
           </Button>
         </ButtonGroup>
       </InnerContainer>

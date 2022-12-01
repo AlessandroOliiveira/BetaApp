@@ -14,10 +14,15 @@ import MRUV from "../pages/Matter/Cinematica_Escalar/MovimentoUniformeVariado.js
 
 // Dinamica
 
+import Dinamica from "../pages/Matter/Dinamica";
 // Mecanica Dos Fluidos
 
 // Em Breve
 import Content from "../pages/Content";
+import ForcaR from "../pages/Matter/Dinamica/ForcaR";
+import LeiGravUni from "../pages/Matter/Dinamica/GravitacaoUniversal";
+import Trabalho from "../pages/Matter/Dinamica/Trabalho";
+import ProtenciaM from "../pages/Matter/Dinamica/PotenciaM";
 
 const AppStack = createNativeStackNavigator();
 
@@ -34,7 +39,13 @@ const Routes = () => {
     
 
       {/* Dinamica */}
+      <AppStack.Screen name="Dinamica" component={Dinamica} />
+      <AppStack.Screen name="ForcaR" component={ForcaR} />
+      <AppStack.Screen name="LeiGravUni" component={LeiGravUni} />
+      <AppStack.Screen name="Trabalho" component={Trabalho} />
+      <AppStack.Screen name="PonteciaM" component={ProtenciaM} />
 
+      
       {/* Mecanica dos Fluidos */}
 
       <AppStack.Screen name="Content" component={Content} />

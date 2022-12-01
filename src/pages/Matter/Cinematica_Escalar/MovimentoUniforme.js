@@ -54,9 +54,9 @@ const MRU = () => {
       num += "v = " + (s - s0) / t;
       num.toString();
     } else if (t == 0) {
-      num = "v = (" + s + " - " + s0 + ") / " + v + "  ";
-      num += "v = " + (s - s0) + " / " + v + "  ";
-      num += "v = " + (s - s0) / v;
+      num = "t = (" + s + " - " + s0 + ") / " + v + "  ";
+      num += "t = " + (s - s0) + " / " + v + "  ";
+      num += "t = " + (s - s0) / v;
 
       num.toString();
     }
@@ -111,10 +111,10 @@ const MRU = () => {
           </InputBox>
         </InputGroup>
         <ModalC>
-          s: posição final (m)
-          s0: posição inicial (m)
-          v: velocidade (m/s)
-          ∆t: intervalo de tempo (s)
+          s: posição final (m) <br/>
+          s0: posição inicial (m) <br/>
+          v: velocidade (m/s) <br/>
+          ∆t: intervalo de tempo (s) <br/>
         </ModalC>
         <Box>
           <ObsText>Obs: coloque 0 no valor que quer descobrir</ObsText>

@@ -8,6 +8,11 @@
     ],
     "android": {
       "package": "android.name"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "4a49b92e-c781-4ca9-9bee-3f141630f3ef"
+      }
     }
   }
 }

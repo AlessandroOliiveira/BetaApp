@@ -23,45 +23,35 @@ import {
 import ModalC from "../../../components/Modal";
 
 
-const MRUV = () => {
-  const [vv, setVv] = useState();
-  const [v0v, setV0v] = useState();
+const ForcaR = () => {
+  const [frv, setFrv] = useState();
+  const [mv, setMv] = useState();
   const [av, setAv] = useState();
-  const [tv, setTv] = useState();
   const [solution, setSolution] = useState([]);
 
 
   //MOVIMENTO UNIFORME VARIADO  
-  function funcaoMRUV(v, v0, a, t) {
+  function funcaoForcaR(fr, m, a) {
 
     let num;
 
-    if (v == 0) {
+    if (fr == 0) {
 
-      num = "V = " + v0 + " + " + a + " * " + t;
-      num += "V = " + v0 + " + " + (a * t);
-      num += "V = " + (v0 + a * t);
+      num = "Fr = " + m + " * " + a;
+      num += "Fr = " + (m * a);
       num.toString();
 
-    } else if (v0 == 0) {
+    } else if (m == 0) {
 
-      num = "V0 = " + v + " - ( " + a + " * " + t + " ) ";
-      num += "V0 = " + v + " + " + (-(a * t));
-      num += "V0 = " + (v + -(a * t));
+      num = "m = " + fr + " / " + a;
+      num += "m = " + (fr / a);
       num.toString();
 
     } else if (a == 0) {
-      num = "a = (" + v + " - " + v0 + ") / " + t + "  ";
-      num += "a = " + (v - v0) + " / " + t + "  ";
-      num += "a = " + (v - v0) / t;
+      num = "a = " + fr + " / " + m;
+      num += "a = " + (fr / m);
       num.toString();
 
-    } else if (t == 0) {
-      num = "t= (" + v + " - " + v0 + ") / " + a + "  ";
-      num += "t = " + (v - v0) + " / " + a + "  ";
-      num += "t = " + (v - v0) / a;
-
-      num.toString();
     }
 
 
@@ -78,23 +68,23 @@ const MRUV = () => {
 
         </Box>
         <TextGroup>
-          <Title>Movimento Retilineo Uniforme Variado</Title>
-          <SubTitle>V = V0 + a * t</SubTitle>
+          <Title>Força resultante da 2ª lei de Newton </Title>
+          <SubTitle>Fr = m * a</SubTitle>
         </TextGroup>
         <InputGroup>
           <InputBox>
-            <InputTitle>V =</InputTitle>
+            <InputTitle>Fr =</InputTitle>
             <InputText
               type="Number"
-              value={vv}
-              onChangeText={(numer) => setVv(numer)}
+              value={frv}
+              onChangeText={(numer) => setFrv(numer)}
             />
           </InputBox>
           <InputBox>
-            <InputTitle>V0 =</InputTitle>
+            <InputTitle>m =</InputTitle>
             <InputText
-              value={v0v}
-              onChangeText={(numer) => setV0v(numer)}
+              value={mv}
+              onChangeText={(numer) => setMv(numer)}
             />
           </InputBox>
         </InputGroup>
@@ -106,20 +96,12 @@ const MRUV = () => {
               onChangeText={(numer) => setAv(numer)}
             />
           </InputBox>
-          <InputBox>
-            <InputTitle>t =</InputTitle>
-            <InputText
-              active
-              value={tv}
-              onChangeText={(numer) => setTv(numer)}
-            />
-          </InputBox>
+
         </InputGroup>
         <ModalC>
-          v: velocidade (m/s) <br/>
-          vo: velocidade inicial (m/s) <br/>
-          a: aceleração (m/s2) <br/>
-          t: tempo (s) <br/>
+          FR: força resultante (N) <br/>
+          m: massa do corpo (kg) <br/>
+          a: aceleração do corpo (m/s2) <br/>
         </ModalC>
         <Box>
           <ObsText>Obs: coloque 0 no valor que quer descobrir</ObsText>
@@ -131,7 +113,7 @@ const MRUV = () => {
           ))}
 
         </Screen>
-        <Button onPress={() => funcaoMRUV(vv, v0v, av, tv)}>
+        <Button onPress={() => funcaoForcaR(frv, mv, av)}>
           <ButtonText>Calcular</ButtonText>
         </Button>
 
@@ -140,4 +122,4 @@ const MRUV = () => {
   );
 }
 
-export default MRUV;
+export default ForcaR;
