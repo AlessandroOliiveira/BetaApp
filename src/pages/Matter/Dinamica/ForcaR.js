@@ -38,18 +38,18 @@ const ForcaR = () => {
     if (fr == 0) {
 
       num = "Fr = " + m + " * " + a;
-      num += "Fr = " + (m * a);
+      num += "Fr = " + ( m * a ) + "  ";
       num.toString();
 
     } else if (m == 0) {
 
       num = "m = " + fr + " / " + a;
-      num += "m = " + (fr / a);
+      num += "m = " + ( fr / a ) + "  ";
       num.toString();
 
     } else if (a == 0) {
       num = "a = " + fr + " / " + m;
-      num += "a = " + (fr / m);
+      num += "a = " + ( fr / m ) + "  ";
       num.toString();
 
     }
@@ -99,9 +99,9 @@ const ForcaR = () => {
 
         </InputGroup>
         <ModalC>
-          FR: força resultante (N) <br/>
-          m: massa do corpo (kg) <br/>
-          a: aceleração do corpo (m/s2) <br/>
+          FR: força resultante (N)  {'\n'}
+          m: massa do corpo (kg)  {'\n'}
+          a: aceleração do corpo (m/s2)  {'\n'}
         </ModalC>
         <Box>
           <ObsText>Obs: coloque 0 no valor que quer descobrir</ObsText>

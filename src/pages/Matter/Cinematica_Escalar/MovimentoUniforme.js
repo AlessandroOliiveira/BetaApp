@@ -74,7 +74,7 @@ const MRU = () => {
         </Box>
         <TextGroup>
           <Title>Movimento Retilineo Uniforme</Title>
-          <SubTitle>S= s0 + v * t</SubTitle>
+          <SubTitle>S= s0 + v * ∆t</SubTitle>
         </TextGroup>
         <InputGroup>
           <InputBox>
@@ -102,7 +102,7 @@ const MRU = () => {
             />
           </InputBox>
           <InputBox>
-            <InputTitle>t =</InputTitle>
+            <InputTitle>∆t =</InputTitle>
             <InputText
               active
               value={tv}
@@ -111,10 +111,10 @@ const MRU = () => {
           </InputBox>
         </InputGroup>
         <ModalC>
-          s: posição final (m) <br/>
-          s0: posição inicial (m) <br/>
-          v: velocidade (m/s) <br/>
-          ∆t: intervalo de tempo (s) <br/>
+          s: posição final (m)  {'\n'}
+          s0: posição inicial (m)  {'\n'}
+          v: velocidade (m/s)  {'\n'}
+          ∆t: intervalo de tempo (s)  {'\n'}
         </ModalC>
         <Box>
           <ObsText>Obs: coloque 0 no valor que quer descobrir</ObsText>

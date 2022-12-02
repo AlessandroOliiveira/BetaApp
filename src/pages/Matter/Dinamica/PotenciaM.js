@@ -97,8 +97,8 @@ const LeiGravUni = () => {
           </InputBox>
         </InputGroup>
         <ModalC>
-          ΔE: variação de energia (J) <br/>
-          Δt: variação de tempo (s) <br/>
+          ΔE: variação de energia (J) {'\n'}
+          Δt: variação de tempo (s) {'\n'}
         </ModalC>
         <Box>
           <ObsText>Obs: coloque 0 no valor que quer descobrir</ObsText>

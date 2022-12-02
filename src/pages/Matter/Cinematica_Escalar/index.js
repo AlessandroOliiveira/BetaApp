@@ -5,6 +5,8 @@ import {
   InnerContainer,
   Box,
 } from "../../../components/styles/BaseConteinerStyles";
+import logo from "../../../assets/Img/LogoIfap.png"
+
 
 import { ButtonText, Title } from "../../../components/styles/TextStyles";
 import { Button, ButtonGroup } from "../../../components/styles/ButtonStyles";
@@ -15,11 +17,9 @@ const Calculator = ({ navigation }) => {
     <StyledContainer>
       <InnerContainer>
         <Box>
-          <Image
-            style={{ whidth: 10 }}
-            source={{
-              uri: "../../../../assets/Img/LogoIfap.png"
-            }}
+        <Image
+            style={{ width: '100%', height: 110, resizeMode: 'contain' }}
+            source={logo}
           />
         </Box>
         <Title>Escolha Um Assunto</Title>

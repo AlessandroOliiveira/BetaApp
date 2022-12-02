@@ -116,10 +116,10 @@ const MRUV = () => {
           </InputBox>
         </InputGroup>
         <ModalC>
-          v: velocidade (m/s) <br/>
-          vo: velocidade inicial (m/s) <br/>
-          a: aceleração (m/s2) <br/>
-          t: tempo (s) <br/>
+          v: velocidade (m/s)  {'\n'}
+          vo: velocidade inicial (m/s)  {'\n'}
+          a: aceleração (m/s2)  {'\n'}
+          t: tempo (s)  {'\n'}
         </ModalC>
         <Box>
           <ObsText>Obs: coloque 0 no valor que quer descobrir</ObsText>

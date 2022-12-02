@@ -29,17 +29,16 @@ const LeiGravUni = () => {
   const [dv, setDv] = useState();
   const [solution, setSolution] = useState([]);
 
-  const gcvi = "6,67 * 10^-11 "
-
+  const gcvi = "6,67*10^-11"
+  const gcv = (6.67 * (Math.pow(10, -11)))
   //Lei da Gravitacao Universal  
   function funcaoLeiGravUni(fg, gcv, m, d) {
 
-    gcv = (6, 67 * (Math.pow(10, -11)))
     let num;
 
     if (fg == 0) {
 
-      num = "Fg = " + gcvi + " * " + m + " / " + d + "² ";
+      num = "Fg = " + gcvi + " * " + m + " / " + d + "² " ;
       num += "Fg = " + (gcv * m) + " / " + d + "² ";
       num += "Fg = " + ((gcv * m) / Math.pow(d, 2));
       num.toString();
@@ -109,10 +108,10 @@ const LeiGravUni = () => {
           </InputBox>
         </InputGroup>
         <ModalC>
-          Fg: força gravitacional (N) <br/>
-          G: constante gravitacional (6,67.10-11 m3/Kg.s2) <br/>
-          M e m: massa dos corpos que sofrem atração entre si <br/>
-          d: distância entre os corpos (m) <br/>
+          Fg: força gravitacional (N)  {'\n'}
+          G: constante gravitacional (6,67.10-11 m3/Kg.s2)  {'\n'}
+          M e m: massa dos corpos que sofrem atração entre si  {'\n'}
+          d: distância entre os corpos (m)  {'\n'}
         </ModalC>
         <Box>
           <ObsText>Obs: coloque 0 no valor que quer descobrir</ObsText>

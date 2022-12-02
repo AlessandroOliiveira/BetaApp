@@ -114,10 +114,10 @@ const Trabalho = () => {
           </InputBox>
         </InputGroup>
         <ModalC>
-          F: força (N) <br/>
-          τ: trabalho (J) <br/>
-          d: deslocamento do corpo (m) <br/>
-          θ: ângulo entre a força e o deslocamento (°) <br/>
+          F: força (N)  {'\n'}
+          τ: trabalho (J)  {'\n'}
+          d: deslocamento do corpo (m)  {'\n'}
+          θ: ângulo entre a força e o deslocamento (°)  {'\n'}
         </ModalC>
         <Box>
           <ObsText>Obs: coloque 0 no valor que quer descobrir</ObsText>

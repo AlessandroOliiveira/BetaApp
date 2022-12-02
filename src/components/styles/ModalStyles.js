@@ -1,7 +1,7 @@
 import styled from "styled-components/native";
 
 export const BoxModal = styled.View`
-height: 70%;
+height: 80%;
 padding: 20px;
 margin: 10px;
 z-index: 10;
@@ -10,6 +10,7 @@ align-items: center;
 text-align: center;
 justify-content: center;
 background-color: #fff;
+border: 1px solid #000
 `
 
 export const Modal = styled.Modal`
